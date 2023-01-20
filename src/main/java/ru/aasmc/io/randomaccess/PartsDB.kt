@@ -101,6 +101,7 @@ class PartsDB(private val path: String) {
         const val DESCLEN = 30
         const val QUANLEN = 4
         const val COSTLEN = 4
+        // since character is 2 bytes long, we multiply PNUMLEN and DESCLEN by 2
         const val RECLEN = 2 * PNUMLEN + 2 * DESCLEN + QUANLEN + COSTLEN
     }
 }
