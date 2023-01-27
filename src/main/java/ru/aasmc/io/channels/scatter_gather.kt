@@ -18,16 +18,17 @@ fun main() {
 
     src.use { source ->
         source.read(buffers)
-        buffer1.flip()
-        while (buffer1.hasRemaining()) {
-            println(buffer1.get().toInt().toChar())
-        }
-
     }
+
+    buffer1.flip()
+    while (buffer1.hasRemaining()) {
+        print(buffer1.get().toInt().toChar())
+    }
+
     println()
 
     while (buffer2.hasRemaining()) {
-        println(buffer2.get().toInt().toChar())
+        print(buffer2.get().toInt().toChar())
     }
     buffer1.rewind()
     buffer2.rewind()

@@ -76,3 +76,14 @@ instance that wraps itself around this region. This mapping mechanism
 offers an efficient way to access a file because no time-consuming system
 calls are needed to perform I/O.
 
+## Socket Channels
+
+Socket channels are described by the ***java.nio.channels*** package’s
+abstract ServerSocketChannel, SocketChannel, and DatagramChannel
+classes. Each class ultimately extends ***java.nio.channels.
+SelectableChannel*** and implements InterruptibleChannel, making
+ServerSocketChannel, SocketChannel, and DatagramChannel instances
+selectable and interruptible. Because SocketChannel and DatagramChannel
+implement the ByteChannel, GatheringByteChannel, and
+ScatteringByteChannel interfaces, you can write to, read from, and perform
+scatter/gather I/O on their underlying sockets.
