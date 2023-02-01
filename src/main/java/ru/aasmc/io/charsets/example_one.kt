@@ -1,5 +1,6 @@
 package ru.aasmc.io.charsets
 
+import java.nio.ByteBuffer
 import java.nio.charset.Charset
 
 fun main() {
@@ -22,7 +23,7 @@ private fun encode(msg: String, cs: Charset) {
     println("Charset: $cs")
     println("Message: $msg")
 
-    val buffer = cs.encode(msg)
+    val buffer: ByteBuffer = cs.encode(msg)
     println("Encoded: ")
     var idx = 0
     while (buffer.hasRemaining()) {
